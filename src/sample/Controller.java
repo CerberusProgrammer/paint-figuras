@@ -38,6 +38,8 @@ public class Controller {
     private Slider sliderSize;
     @FXML
     private Pane panelPaper;
+    @FXML
+    private ImageView buttonClean;
 
     ArrayList<Double> pointX = new ArrayList<>();
     ArrayList<Double> pointY = new ArrayList<>();
@@ -111,6 +113,10 @@ public class Controller {
         selectionFigure.setId(((ImageView) event.getSource()).getId());
     }
 
+    @FXML
+    void clean(MouseEvent event) {
+        panelPaper.getChildren().clear();
+    }
 
     @FXML
     void changeValue(MouseEvent event) {
